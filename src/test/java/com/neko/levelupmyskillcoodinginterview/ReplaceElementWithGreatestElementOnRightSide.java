@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-public class ReplaceElementWithGreatestElementOnRightSideTest {
+public class ReplaceElementWithGreatestElementOnRightSide {
 
     @Test
     void testLeetCode1299() {
