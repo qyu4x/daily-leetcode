@@ -25,6 +25,7 @@ public class LongestCommonPrefix {
     }
 
     public String longestCommonPrefix(String[] strs) {
+        // in this solution there are still bugs just acc 4 test from 120 test case
         Set<String> tempPrefix = new HashSet<>();
         Map<String, Integer> tempCount = new HashMap<>();
 
