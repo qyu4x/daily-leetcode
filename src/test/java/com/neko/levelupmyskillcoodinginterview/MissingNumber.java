@@ -8,8 +8,8 @@ public class MissingNumber {
 
     @Test
     void testMissingNumber() {
-        int[] nums = {9,6,4,2,3,5,7,0,1};
-        System.out.println(missingNumber(nums));
+        int[] nums = {9, 6, 4, 2, 3, 5, 7, 0, 1};
+        System.out.println(missingValueBestSolution(nums));
     }
 
     public int missingNumber(int[] nums) {
@@ -21,12 +21,12 @@ public class MissingNumber {
         return -1;
     }
 
-    public boolean binarySearch(int []nums, int target) {
+    public boolean binarySearch(int[] nums, int target) {
         int low = 0;
-        int high = nums.length-1;
+        int high = nums.length - 1;
 
         Arrays.sort(nums);
-        while(high >= low) {
+        while (high >= low) {
             int mid = (low + high) / 2;
 
             if (target == nums[mid]) {
@@ -39,5 +39,17 @@ public class MissingNumber {
         }
 
         return false;
+    }
+
+    public int missingValueBestSolution(int[] nums) {
+        int n = nums.length;
+        int expectedResult = n * (n + 1) / 2;
+
+        int actualResult = 0;
+        for (int i = 0; i < n; i++) {
+            actualResult += nums[i];
+        }
+
+        return expectedResult-actualResult;
     }
 }
